@@ -7,5 +7,5 @@ html,body{
     box-sizing: border-box;
 }
 body{
-    background-image: linear-gradient(to right, skyblue, blue, skyblue);
+    background-image: linear-gradient(to right, skyblue, rgb(166, 166, 233), skyblue);
 }
