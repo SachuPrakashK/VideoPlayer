@@ -11,12 +11,13 @@ export class VideocenterComponent implements OnInit {
   selectedVideo: Video;
   hidenewVideo: boolean = true;
   videos: any;
+  videoAdded: Video;
 
   constructor(private _videoService: VideoService) { }
 
   ngOnInit(): void {
     this._videoService.getVideos()
-      .subscribe(resVideoData => this.videos = resVideoData);
+      .subscribe(videoFetched => this.videos = videoFetched);
   }
 
   onSelectVideo(video: any) {
@@ -29,17 +30,18 @@ export class VideocenterComponent implements OnInit {
     this.hidenewVideo = false;
   }
 
-  onSubmitAddVideo(video: any) {
+  onSubmitAddVideo(video: Video) {
     this._videoService.addVideo(video)
-      .subscribe(resNewVideo => {
-        this.videos.push(resNewVideo);
+      .subscribe(videoAdded => {
+        this.videos.push(videoAdded);
         this.hidenewVideo = true;
-        console.log(resNewVideo);
+        console.log(videoAdded);
       });
 
   }
 
   onUpdateVideoEvent(video: any) {
+    console.log(video);
     this._videoService.updateVideo(video)
       .subscribe(resUpdatedVideo => video = resUpdatedVideo);
     this.selectedVideo = null;
@@ -49,7 +51,7 @@ export class VideocenterComponent implements OnInit {
     console.log(video);
     let videoArray = this.videos;
     this._videoService.deleteVideo(video)
-      .subscribe(resDeletedVideo => {
+      .subscribe(resDeleteVideo => {
         for (let i = 0; i < videoArray.length; i++) {
           if (videoArray[i]._id === video._id) {
             videoArray.splice(i, 1);

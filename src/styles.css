@@ -1,11 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.min.css";
 
-html,body{
+html{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    height: 100%;
 }
 body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-image: linear-gradient(to right, skyblue, rgb(166, 166, 233), skyblue);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
