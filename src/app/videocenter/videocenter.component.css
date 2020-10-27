@@ -1,0 +1,10 @@
+.newVideo button{
+    margin: 20px auto;
+}
+
+.newVideo .videoList{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}

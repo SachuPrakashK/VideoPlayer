@@ -25,9 +25,9 @@
              [video]="selectedVideo">
             </app-video-details>
         </div>
-        <div class="col-sm-3">
+        <div class="newVideo col-sm-3">
             <button style="margin-bottom:2px;" type="button" (click)="newVideo()" class="btn btn-success btn-block">+ New Video</button>
-            <app-video-list [videos]="videos" (SelectVideo)="onSelectVideo($event)"></app-video-list>
+            <app-video-list class="videoList" [videos]="videos" (SelectVideo)="onSelectVideo($event)"></app-video-list>
         </div>
     </div>
 </div>

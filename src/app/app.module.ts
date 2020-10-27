@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { VideocenterComponent } from './videocenter/videocenter.component';
 import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
 import { VideoListComponent } from './video-list/video-list.component';
 import { VideoDetailsComponent } from './video-details/video-details.component';
 import { SafePipe } from './safe.pipe';
@@ -20,7 +19,6 @@ import { SafePipe } from './safe.pipe';
     HomeComponent,
     VideocenterComponent,
     HeaderComponent,
-    FooterComponent,
     VideoListComponent,
     VideoDetailsComponent,
     SafePipe
